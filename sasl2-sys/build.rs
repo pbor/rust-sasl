@@ -281,7 +281,7 @@ fn emit_found_sasl(metadata: &Metadata, lib_dir: PathBuf, include_dir: PathBuf) 
     };
 
     println!("cargo:rustc-link-search=native={}", lib_dir.display());
-    println!("cargo:rustc-link-lib={}=sasl2", link_kind);
+    println!("cargo:rustc-link-lib={}=libsasl", link_kind);
 }
 
 fn validate_headers(include_dirs: &[PathBuf]) {
